@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://pagecdn.io/lib/skeleton/2.0.4/skeleton.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>Login</h1>
+    <% if(message){%>
+    <h5><%= message %></h5>
+    <%}%>
+    <form action="/users/login" method="post">
+      <div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="hello@example.com"
+          required
+        />
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="top_secret"
+          required
+        />
+      </div>
+
+      <div><button type="submit">submit</button></div>
+    </form>
+    <div>
+      <a href="/users/register">don't have an account already ? click here</a>
+    </div>
+  </body>
+</html>
